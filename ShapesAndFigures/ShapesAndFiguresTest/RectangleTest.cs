@@ -68,7 +68,19 @@ namespace ShapesAndFiguresTest
             Rectangle r = new Rectangle(lenght, width);
             double actualArea = r.GetArea();
             Assert.AreEqual(expetedArea, actualArea);
+        }
+
+        [TestMethod]
+        public void rectanglePerimeterTest()
+        {
+            double lenght = 1.25;
+            double width = 1.25;
+            double expetedPerimeter = 5;
+            Rectangle r = new Rectangle(lenght, width);
+            double actualPerimeter = r.GetPerimeter();
+            Assert.AreEqual(expetedPerimeter, actualPerimeter);
 
         }
+
     }
 }
