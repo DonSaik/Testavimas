@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesAndFigures", "ShapesAndFigures\ShapesAndFigures.csproj", "{32FAFD5D-6B12-4DB0-AB19-EA28BBD31ACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesAndFiguresTest", "ShapesAndFiguresTest\ShapesAndFiguresTest.csproj", "{B5C552B1-1AF1-43F0-8F9E-6CB63B341629}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32FAFD5D-6B12-4DB0-AB19-EA28BBD31ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FAFD5D-6B12-4DB0-AB19-EA28BBD31ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FAFD5D-6B12-4DB0-AB19-EA28BBD31ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FAFD5D-6B12-4DB0-AB19-EA28BBD31ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C552B1-1AF1-43F0-8F9E-6CB63B341629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C552B1-1AF1-43F0-8F9E-6CB63B341629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C552B1-1AF1-43F0-8F9E-6CB63B341629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C552B1-1AF1-43F0-8F9E-6CB63B341629}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
