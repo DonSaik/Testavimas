@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ShapesAndFigures;
 
 namespace ShapesAndFiguresTest
 {
@@ -7,7 +8,7 @@ namespace ShapesAndFiguresTest
     public class RectangleTest
     {
         [TestMethod]
-        public void rectangleAreaTest()
+        public void RectangleAreaTest()
         {
             double lenght = 1.25;
             double width = 1.25;
@@ -18,7 +19,7 @@ namespace ShapesAndFiguresTest
         }
 
         [TestMethod]
-        public void rectanglePerimeterTest()
+        public void RectanglePerimeterTest()
         {
             double lenght = 1.25;
             double width = 1.25;
