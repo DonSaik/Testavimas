@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace ShapesAndFigures
 {
-    public class Rectangle : Shape
+    public class Circle : Shape
     {
-        public Rectangle(double width, double height)
+        public Circle(double radius)
         {
 
         }
-
         public override double GetArea()
         {
             throw new NotImplementedException();

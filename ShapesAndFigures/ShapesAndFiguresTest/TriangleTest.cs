@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ShapesAndFigures;
 
 namespace ShapesAndFiguresTest
 {
@@ -13,7 +14,7 @@ namespace ShapesAndFiguresTest
             double expetedArea = 0.43301;
             Triangle t = new Triangle(a, b, c);
             double actualArea = t.GetArea();
-            Assert.AreEqual(expetedArea, actualArea);
+            Assert.AreEqual(expetedArea, actualArea, 0.0001);
         }
 
         [TestMethod]
