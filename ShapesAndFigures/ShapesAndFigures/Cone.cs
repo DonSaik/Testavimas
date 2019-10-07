@@ -8,6 +8,10 @@ namespace ShapesAndFigures
 {
     public class Cone : Figure
     {
+        public Cone(double radius, double height)
+        {
+
+        }
         public override double GetArea()
         {
             throw new NotImplementedException();
