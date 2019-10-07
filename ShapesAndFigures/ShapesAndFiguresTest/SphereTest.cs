@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ShapesAndFigures;
 
 namespace ShapesAndFiguresTest
 {
@@ -12,7 +13,7 @@ namespace ShapesAndFiguresTest
             double r = 5.5;
             double expectedResult = 34.557519;
             Sphere s = new Sphere(r);
-            double result = c.GetPerimeter();
+            double result = s.GetBasePerimeter();
             Assert.AreEqual(expectedResult, result);
         }
         [TestMethod]
@@ -21,7 +22,7 @@ namespace ShapesAndFiguresTest
             double r = 0;
             double expectedResult = 0;
             Sphere s = new Sphere(r);
-            double result = c.GetPerimeter();
+            double result = s.GetBasePerimeter();
             Assert.AreEqual(expectedResult, result);
         }
         [TestMethod]
@@ -30,7 +31,7 @@ namespace ShapesAndFiguresTest
             double r = -10;
             double expectedResult = 0;
             Sphere s = new Sphere(r);
-            double result = c.GetPerimeter();
+            double result = s.GetBasePerimeter();
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -40,7 +41,7 @@ namespace ShapesAndFiguresTest
             double r = 5.5;
             double expectedResult = 95.033178;
             Sphere s = new Sphere(r);
-            double result = c.GetArea();
+            double result = s.GetArea();
             Assert.AreEqual(expectedResult, result);
         }
         [TestMethod]
@@ -49,7 +50,7 @@ namespace ShapesAndFiguresTest
             double r = 0;
             double expectedResult = 0;
             Sphere s = new Sphere(r);
-            double result = c.GetArea();
+            double result = s.GetArea();
             Assert.AreEqual(expectedResult, result);
         }
         [TestMethod]
@@ -58,7 +59,7 @@ namespace ShapesAndFiguresTest
             double r = -10;
             double expectedResult = 0;
             Sphere s = new Sphere(r);
-            double result = c.GetArea();
+            double result = s.GetArea();
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -66,7 +67,7 @@ namespace ShapesAndFiguresTest
         public void SphereAreaWithNegativesTest(double radius, double expecterArea)
         {
             Sphere s = new Sphere(radius);
-            double actualArea = sphere.GetArea();
+            double actualArea = s.GetArea();
             Assert.AreEqual(expecterArea, actualArea, 0.0001);
 
         }
@@ -74,7 +75,7 @@ namespace ShapesAndFiguresTest
         public void SphereVolumeWithNegativesTest(double radius, double expecterArea)
         {
             Sphere s = new Sphere(radius);
-            double actualArea = sphere.GetVolume();
+            double actualArea = s.GetVolume();
             Assert.AreEqual(expecterArea, actualArea, 0.0001);
 
         }
@@ -82,7 +83,7 @@ namespace ShapesAndFiguresTest
         public void SphereVolumeTest(double radius, double expecterArea)
         {
             Sphere s = new Sphere(radius);
-            double actualArea = sphere.GetVolume();
+            double actualArea = s.GetVolume();
             Assert.AreEqual(expecterArea, actualArea, 0.01);
 
         }
