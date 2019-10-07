@@ -14,7 +14,7 @@ namespace ShapesAndFiguresTest
             double expectedResult = 34.557519;
             Circle c = new Circle(r);
             double result = c.GetPerimeter();
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(expectedResult, result, 0.001);
         }
         [TestMethod]
         public void PerimeterWithZeroTest()
@@ -32,7 +32,7 @@ namespace ShapesAndFiguresTest
             double expectedResult = 0;
             Circle c = new Circle(r);
             double result = c.GetPerimeter();
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(expectedResult, result, 0.001);
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace ShapesAndFiguresTest
             double expectedResult = 95.033178;
             Circle c = new Circle(r);
             double result = c.GetArea();
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(expectedResult, result, 0.001);
         }
         [TestMethod]
         public void AreaWithZeroTest()
@@ -51,7 +51,7 @@ namespace ShapesAndFiguresTest
             double expectedResult = 0;
             Circle c = new Circle(r);
             double result = c.GetArea();
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(expectedResult, result, 0.001);
         }
         [TestMethod]
         public void AreaWithNegativeTest()
@@ -60,7 +60,7 @@ namespace ShapesAndFiguresTest
             double expectedResult = 0;
             Circle c = new Circle(r);
             double result = c.GetArea();
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(expectedResult, result, 0.001);
         }
 
     }

@@ -8,23 +8,43 @@ namespace ShapesAndFigures
 {
     public class Pyramid : Figure
     {
+        private double baseLenght;
+        private double height;
+
         public Pyramid(double height, double baseLenght)
         {
-
+            this.Height = height;
+            this.BaseLenght = baseLenght;
         }
+
+        public double BaseLenght { get => baseLenght; set => baseLenght = value; }
+        public double Height { get => height; set => height = value; }
+
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            if(baseLenght <= 0 || height <= 0)
+            {
+                return 0;
+            }
+            return baseLenght*(baseLenght + Math.Sqrt(baseLenght*baseLenght + 4*height*height));
         }
 
         public override double GetBasePerimeter()
         {
-            throw new NotImplementedException();
+            if (baseLenght <= 0 || height <= 0)
+            {
+                return 0;
+            }
+            return baseLenght * 4;
         }
 
         public override double GetVolume()
         {
-            throw new NotImplementedException();
+            if (baseLenght <= 0 || height <= 0)
+            {
+                return 0;
+            }
+            return 1 * baseLenght * baseLenght * height/3;
         }
     }
 }
