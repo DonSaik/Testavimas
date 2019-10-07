@@ -8,18 +8,26 @@ namespace ShapesAndFigures
 {
     public class Circle : Shape
     {
+        // Area of a circle: A=πr2
+        private double radius;
+
         public Circle(double radius)
         {
-
+            this.radius = radius;
         }
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            double pi = Math.PI;
+            double GetArea = pi * (radius * radius);
+            return GetArea;
         }
 
         public override double GetPerimeter()
         {
-            throw new NotImplementedException();
+            // Perimeter (Circumference) of a circle: C=2πr
+            double pi = Math.PI;
+            double GetPerimeter = 2 * pi * radius;
+            return GetPerimeter;
         }
     }
 }

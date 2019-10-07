@@ -8,13 +8,18 @@ namespace ShapesAndFigures
 {
     public class Cone : Figure
     {
+        double radius, h;
+        double PI = 3.14;
+
+
         public Cone(double radius, double height)
         {
 
         }
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            double GetArea = PI * radius * (radius + Math.Sqrt(radius * radius + h * h));
+            return GetArea;
         }
 
         public override double GetBasePerimeter()
@@ -24,7 +29,8 @@ namespace ShapesAndFigures
 
         public override double GetVolume()
         {
-            throw new NotImplementedException();
+            double GetVolume = (1.0 / 3) * PI * radius * radius * h;
+            return GetVolume;
         }
     }
 }

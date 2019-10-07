@@ -8,19 +8,34 @@ namespace ShapesAndFigures
 {
     public class Rectangle : Shape
     {
-        public Rectangle(double width, double height)
-        {
+        private double a;
+        private double b;
 
+        public Rectangle(double a, double b)
+        {
+            this.a = a;
+            this.b = b;
         }
+
+        public double A { get => a; set => a = value; }
+        public double B { get => b; set => b = value; }
 
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            if (a <= 0 || b <= 0)
+            {
+                return 0;
+            }
+            return a * b;
         }
 
         public override double GetPerimeter()
         {
-            throw new NotImplementedException();
+            if (a <= 0 || b <= 0)
+            {
+                return 0;
+            }
+            return 2 * (a + b);
         }
     }
 }

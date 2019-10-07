@@ -55,6 +55,9 @@
     <Compile Include="TriangleTest.cs" />
     <Compile Include="ConeTest.cs" />
     <Compile Include="CylinderTest.cs" />
+    <Compile Include="PentagonTest.cs" />
+    <Compile Include="PyramidTest.cs" />
+    <Compile Include="SphereTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
