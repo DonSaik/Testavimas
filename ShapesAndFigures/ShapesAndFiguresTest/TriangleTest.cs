@@ -10,8 +10,8 @@ namespace ShapesAndFiguresTest
         [TestMethod]
         public void TriangleAreaTest()
         {
-            double a = 1, b = 1, c = 1;
-            double expetedArea = 0.43301;
+            double a = 0, b = 1, c = 1;
+            double expetedArea = 0;
             Triangle t = new Triangle(a, b, c);
             double actualArea = t.GetArea();
             Assert.AreEqual(expetedArea, actualArea, 0.0001);

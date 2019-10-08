@@ -46,26 +46,22 @@ namespace ShapesAndFiguresTest
             Assert.AreEqual(expecterArea, actualArea, 0.0001);
 
         }
-        [DataRow(-1, 2, 0)]
-        [DataRow(1, -1, 0)]
-        [DataRow(0, 1, 0)]
-        [DataRow(1, 0, 0)]
-        [TestMethod]
-        public void ConeVolumeWithNegativesTest(double radius, double height, double expecterArea)
+        public void ConeVolumeWithNegativesTest()
         {
-            Cylinder cylinder = new Cylinder(radius, height);
+            Cylinder cylinder = new Cylinder(-1, 0);
             double actualArea = cylinder.GetVolume();
-            Assert.AreEqual(expecterArea, actualArea, 0.0001);
+            Assert.AreEqual(0, actualArea, 0.0001);
 
         }
-        [DataRow(11.2, 12.5, 4926.01728)]
-        [DataRow(35.9, 0.2, 809.7832)]
         [TestMethod]
-        public void ConeVolumeTest(double radius, double height, double expecterArea)
+        public void ConeVolumeTest()
         {
+            double radius = 11.2;
+            double height = 12.5;
+            double expecterVolume = 4926.01728;
             Cylinder cylinder = new Cylinder(radius, height);
             double actualArea = cylinder.GetVolume();
-            Assert.AreEqual(expecterArea, actualArea, 0.01);
+            Assert.AreEqual(expecterVolume, actualArea, 0.01);
 
         }
     }

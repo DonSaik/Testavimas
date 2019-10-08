@@ -17,8 +17,10 @@ namespace ShapesAndFigures
 
         }
         public Triangle(double a, double b, double c)
-        {
-            this.a = a;
+        {/*
+            if ((a <= 0 || b <= 0 || c <= 0) || (a + b <= c || a + c <= b || b + c <= a))
+                throw new Exception("Triangle is unavialiable");*/
+                this.a = a;
             this.b = b;
             this.c = c;
         }
@@ -29,7 +31,7 @@ namespace ShapesAndFigures
 
         public override double GetArea()
         {
-            if(a<=0 || b<=0 || c <= 0)
+            if((a<=0 || b<=0 || c <= 0) || (a+b<=c || a+c<=b|| b+c<=a ))
             {
                 return 0;
             }
@@ -39,7 +41,7 @@ namespace ShapesAndFigures
 
         public override double GetPerimeter()
         {
-            if (a <= 0 || b <= 0 || c <= 0)
+            if (a <= 0 || b <= 0 || c <= 0 || (a + b <= c || a + c <= b || b + c <= a))
             {
                 return 0;
             }
