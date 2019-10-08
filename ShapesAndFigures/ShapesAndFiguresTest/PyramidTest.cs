@@ -12,7 +12,7 @@ namespace ShapesAndFiguresTest
         {
             Pyramid pyramid = new Pyramid(11.5, 11.5);
             double actualPerimeter = pyramid.GetBasePerimeter();
-            double expectedPerimeter = 57.5;
+            double expectedPerimeter = 46;
             Assert.AreEqual(expectedPerimeter, actualPerimeter, 0.0001);
 
         }
@@ -30,8 +30,8 @@ namespace ShapesAndFiguresTest
         {
             Pyramid pyramid = new Pyramid(11.5, 12.5);
             double actualArea = pyramid.GetArea();
-            double expectedArea = 132.25;
-            Assert.AreEqual(expectedArea, actualArea, 0.0001);
+            double expectedArea = 483.466;
+            Assert.AreEqual(expectedArea, actualArea, 0.01);
 
         }
         [DataRow(-1, 2, 0)]
@@ -58,8 +58,7 @@ namespace ShapesAndFiguresTest
             Assert.AreEqual(expecterArea, actualArea, 0.0001);
 
         }
-        [DataRow(11.2, 12.5, 1642.01)]
-        [DataRow(35.9, 0.2, 269.928)]
+        [DataRow(11.5, 11.5, 506.958)]
         [TestMethod]
         public void PyramidVolumeTest(double baseLenght, double height, double expecterArea)
         {

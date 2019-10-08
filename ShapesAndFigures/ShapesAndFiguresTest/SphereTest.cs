@@ -8,28 +8,11 @@ namespace ShapesAndFiguresTest
     public class SphereTest
     {
         [TestMethod]
+        [ExpectedException(typeof(NotSupportedException))]
         public void PerimeterTest()
         {
             double r = 5.5;
             double expectedResult = 34.557519;
-            Sphere s = new Sphere(r);
-            double result = s.GetBasePerimeter();
-            Assert.AreEqual(expectedResult, result);
-        }
-        [TestMethod]
-        public void PerimeterWithZeroTest()
-        {
-            double r = 0;
-            double expectedResult = 0;
-            Sphere s = new Sphere(r);
-            double result = s.GetBasePerimeter();
-            Assert.AreEqual(expectedResult, result);
-        }
-        [TestMethod]
-        public void PerimeterWithNegativeTest()
-        {
-            double r = -10;
-            double expectedResult = 0;
             Sphere s = new Sphere(r);
             double result = s.GetBasePerimeter();
             Assert.AreEqual(expectedResult, result);
@@ -39,10 +22,10 @@ namespace ShapesAndFiguresTest
         public void AreaTest()
         {
             double r = 5.5;
-            double expectedResult = 95.033178;
+            double expectedResult = 380.132;
             Sphere s = new Sphere(r);
             double result = s.GetArea();
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(expectedResult, result, 0.001);
         }
         [TestMethod]
         public void AreaWithZeroTest()
@@ -64,25 +47,28 @@ namespace ShapesAndFiguresTest
         }
 
         [TestMethod]
-        public void SphereAreaWithNegativesTest(double radius, double expecterArea)
+        public void SphereAreaWithNegativesTest()
         {
-            Sphere s = new Sphere(radius);
+            double expecterArea = 0;
+            Sphere s = new Sphere(-2);
             double actualArea = s.GetArea();
             Assert.AreEqual(expecterArea, actualArea, 0.0001);
 
         }
         [TestMethod]
-        public void SphereVolumeWithNegativesTest(double radius, double expecterArea)
+        public void SphereVolumeWithNegativesTest()
         {
-            Sphere s = new Sphere(radius);
+            double expecterArea = 0;
+            Sphere s = new Sphere(-2);
             double actualArea = s.GetVolume();
             Assert.AreEqual(expecterArea, actualArea, 0.0001);
 
         }
         [TestMethod]
-        public void SphereVolumeTest(double radius, double expecterArea)
+        public void SphereVolumeTest()
         {
-            Sphere s = new Sphere(radius);
+            double expecterArea = 33.51;
+            Sphere s = new Sphere(2);
             double actualArea = s.GetVolume();
             Assert.AreEqual(expecterArea, actualArea, 0.01);
 

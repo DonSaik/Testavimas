@@ -58,7 +58,7 @@ namespace ShapesAndFiguresTest
             Assert.AreEqual(expecterArea, actualArea, 0.0001);
 
         }
-        [DataRow(11.2, 12.5, 1731.14845)]
+        [DataRow(11.2, 12.5, 1642.005760)]
         [DataRow(35.9, 0.2, 269.927735)]
         [TestMethod]
         public void ConeVolumeTest(double radius, double height, double expecterArea)

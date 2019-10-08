@@ -17,6 +17,11 @@ namespace ShapesAndFigures
         }
         public override double GetArea()
         {
+            if (radius <= 0)
+            {
+                return 0;
+            }
+
             double pi = Math.PI;
             double GetArea = pi * (radius * radius);
             return GetArea;
@@ -24,6 +29,11 @@ namespace ShapesAndFigures
 
         public override double GetPerimeter()
         {
+            if (radius <= 0)
+            {
+                return 0;
+            }
+
             // Perimeter (Circumference) of a circle: C=2πr
             double pi = Math.PI;
             double GetPerimeter = 2 * pi * radius;

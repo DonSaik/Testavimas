@@ -8,24 +8,44 @@ namespace ShapesAndFigures
 {
     public class Cylinder:Figure
     {
-        public Cylinder(double radius, double hight)
+        double radius;
+        double h;
+        public Cylinder(double radius, double height)
         {
-
+            this.radius = radius;
+            this.h = height;
         }
 
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            if (radius <= 0 || h <= 0)
+            {
+                return 0;
+            }
+            double pi = Math.PI;
+            double GetArea = 2 * pi * radius * (radius + h);
+            return GetArea;
         }
 
         public override double GetBasePerimeter()
         {
-            throw new NotImplementedException();
+            if (radius <= 0 || h <= 0)
+            {
+                return 0;
+            }
+            double pi = Math.PI;
+            double GetPerimeter = 2 * pi * radius;
+            return GetPerimeter;
         }
 
         public override double GetVolume()
         {
-            throw new NotImplementedException();
+            if (radius <= 0 || h <=0)
+            {
+                return 0;
+            }
+            double GetVolume = Math.PI * radius * radius * h;
+            return GetVolume;
         }
     }
 }

@@ -8,28 +8,45 @@ namespace ShapesAndFigures
 {
     public class Cone : Figure
     {
-        double radius, h;
-        double PI = 3.14;
-
+        double radius;
+        double h;
 
         public Cone(double radius, double height)
         {
-
+            this.radius = radius;
+            this.h = height;
+            
         }
         public override double GetArea()
         {
-            double GetArea = PI * radius * (radius + Math.Sqrt(radius * radius + h * h));
+            if (radius <= 0 || h <=0)
+            {
+                return 0;
+            }
+            double pi = Math.PI;
+            double GetArea = pi * radius * (radius + Math.Sqrt(radius * radius + h * h));
             return GetArea;
         }
 
         public override double GetBasePerimeter()
         {
-            throw new NotImplementedException();
+            if (radius <= 0 || h <=0)
+            {
+                return 0;
+            }
+            double pi = Math.PI;
+            double GetPerimeter = 2 * pi * radius;
+            return GetPerimeter;
         }
 
         public override double GetVolume()
         {
-            double GetVolume = (1.0 / 3) * PI * radius * radius * h;
+            if (radius <= 0 || h <=0)
+            {
+                return 0;
+            }
+            double pi = Math.PI;
+            double GetVolume = (1.0 / 3) * pi * radius * radius * h;
             return GetVolume;
         }
     }
