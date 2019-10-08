@@ -28,7 +28,7 @@ namespace ShapesAndFigures
 
         public override double GetBasePerimeter()
         {
-            throw new Exception("Sphere has no base perimeter");
+            throw new NotSupportedException("Sphere has no base perimeter");
         }
 
         public override double GetVolume()
